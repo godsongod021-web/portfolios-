@@ -2,46 +2,182 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
+    <title>Portfolio de Godson</title>
     <style>
+        /* Style général de la page (fond sombre élégant) */
         body {
-            background-color: black; /* Un noir légèrement adouci, très moderne */
-            color: #ffffff; /* Pour que ton texte soit bien visible en blanc */
-            font-family: sans-serif; /* Une police sans empattement pour faire plus pro */
+            background-color: #0f172a; /* Bleu très nuit */
+            color: #f8fafc; /* Texte blanc cassé */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
         
-        img {
-            max-width: 200px;
+        /* Conteneur principal pour centrer le contenu */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        /* Style de la photo de profil */
+        img.profil {
+            max-width: 150px;
             border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: block;
+            margin: 0 auto 20px auto;
         }
         
         h1, h2, h3 {
             font-weight: bold;
             letter-spacing: 1px;
         }
+
+        h1 { text-align: center; margin-bottom: 5px; }
+        .intro-text { text-align: center; color: #94a3b8; margin-bottom: 40px; }
+
+        /* --- NOUVEAU STYLE POUR LES COMPÉTENCES --- */
+        .skills-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #1e293b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        
+        .skills-grid {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            text-align: left;
+            flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+        }
+        
+        .skill-box {
+            flex: 1;
+            min-width: 300px;
+            background-color: #1e293b; /* Couleur de la carte */
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .skill-box h3 {
+            color: #94a3b8; /* Texte gris clair pour le titre de la catégorie */
+            font-size: 1.1em;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        
+        /* La barre de progression (fond gris) */
+        .progress-bar {
+            width: 100%;
+            background-color: #334155; 
+            height: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* Le remplissage bleu de la barre */
+        .progress {
+            background-color: #3b82f6; /* Bleu vif */
+            height: 100%;
+            border-radius: 10px;
+        }
+        /* ------------------------------------------ */
+        
     </style>
 </head>
 <body>
-    <h1>mon portfolio</h1> 
-    <img src="BGBS9985.JPG" alt="Photo de profil">
-    
-    <p>je m'appelle godson viahoude etudiant en deuxieme annee de developpement web et passioné par la création d'applications web et mobiles mon objectif est de devenir un developpeur full-stack compétent et créatif.</p>
-    
-    <h2>A propos</h2>
-    <p>passionné par la création d'applications web et mobiles mon objectif est de devenir un developpeur full-stack compétent et créatif.</p>
-    
-    <h3>Compétences</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-    </ul>
+    <div class="container">
+        
+        <!-- En-tête du portfolio -->
+        <img src="BGBS9985.JPG" alt="Photo de profil" class="profil">
+        <h1>Mon Portfolio</h1> 
+        <p class="intro-text">Je m'appelle Godson Viahoude, étudiant en deuxième année de développement web.</p>
+        
+        <h2>À propos</h2>
+        <p>Passionné par la création d'applications web et mobiles, mon objectif est de devenir un développeur full-stack compétent et créatif.</p>
+        
+        <!-- Section des compétences avec barres de progression -->
+        <div class="skills-section">
+            <span class="badge">🎓 Compétences</span>
+            <h2>Les technologies que je maîtrise</h2>
+            <p style="color: #94a3b8;">Un aperçu détaillé des outils que j'utilise pour concevoir des sites modernes et performants.</p>
+            
+            <div class="skills-grid">
+                
+                <!-- Colonne Frontend -->
+                <div class="skill-box">
+                    <h3>// Frontend</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>HTML / CSS</span><span>90%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>JavaScript</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>React</span><span>60%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                    </div>
+                </div>
 
-    <h2>Projets</h2>
-    <p>Projet académique réalisé dans vs code pour pratiquer les bases de la programmation site vitrine en html css, projet académique réalisé dans vs code pour pratiquer les bases de la programmation site vitrine en python.</p>
+                <!-- Colonne Backend & Outils -->
+                <div class="skill-box">
+                    <h3>// Backend & Outils</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Python</span><span>70%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Node.js</span><span>50%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info"><span>Git / GitHub</span><span>80%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
-    <h2>Contact</h2>
-    <p>Vous pouvez me contacter à travers mon adresse email : godsongod021@gmail.com</p>
+        <br><br>
+        <h2>Projets</h2>
+        <p>- Projet académique réalisé dans VS Code pour pratiquer les bases de la programmation (site vitrine en HTML/CSS).<br>
+           - Projet académique réalisé dans VS Code pour pratiquer les bases de la programmation (site vitrine en Python).</p>
+
+        <h2>Contact</h2>
+        <p>Vous pouvez me contacter à travers mon adresse email : godsongod021@gmail.com</p>
+        
+    </div>
 </body>
 </html>
